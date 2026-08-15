@@ -1,0 +1,133 @@
+/* ============================================================
+   REHBER (BLOG) EK STİLLERİ
+   Yalnızca docs/blog/ altındaki sayfalar yükler. Ana tasarım
+   sistemi (assets/tasarim.css) olduğu gibi kalır; burada
+   yalnızca yazı düzenine özgü bileşenler tanımlanır.
+   Jetonlar tasarim.css'ten miras alınır.
+   ============================================================ */
+
+/* --- Kırıntı yolu ----------------------------------------- */
+.kirinti { margin-bottom: calc(var(--olcek)*5); }
+.kirinti ol {
+  list-style: none; display: flex; flex-wrap: wrap;
+  gap: calc(var(--olcek)*2); margin: 0; padding: 0;
+  font-family: var(--f-mono); font-size: .78rem;
+  color: var(--murekkep-3);
+}
+.kirinti li + li::before {
+  content: "/"; margin-right: calc(var(--olcek)*2); color: var(--cizgi-koyu);
+}
+.kirinti a { color: var(--murekkep-2); }
+
+/* --- Yazı künyesi ----------------------------------------- */
+.yazi-bilgi {
+  font-family: var(--f-mono); font-size: .78rem;
+  color: var(--murekkep-3); border-top: var(--sinir);
+  padding-top: calc(var(--olcek)*3);
+  margin-bottom: calc(var(--olcek)*6);
+}
+
+/* --- İçindekiler: kutu değil, sol çizgi -------------------- */
+.icindekiler {
+  background: var(--yuzey);
+  border: var(--sinir); border-left: 4px solid var(--cizgi-koyu);
+  padding: calc(var(--olcek)*4) calc(var(--olcek)*5);
+  margin-bottom: calc(var(--olcek)*7);
+}
+.icindekiler ol { margin: 0; padding-left: calc(var(--olcek)*5); }
+.icindekiler li { margin-bottom: calc(var(--olcek)*1); }
+.icindekiler .etiket { margin-bottom: calc(var(--olcek)*3); }
+
+/* --- Yazı gövdesi ----------------------------------------- */
+.yazi h2 { border-top: var(--sinir); padding-top: calc(var(--olcek)*5); }
+.yazi h2:first-of-type { border-top: 0; padding-top: 0; }
+.yazi ul, .yazi ol { padding-left: calc(var(--olcek)*6); }
+.yazi li { margin-bottom: calc(var(--olcek)*2); }
+.yazi table caption { text-align: left; }
+
+/* --- Sık sorulan sorular ---------------------------------- */
+.sss h3 { margin-top: calc(var(--olcek)*6); font-size: 1.02rem; }
+.sss h3::before { content: "S "; font-family: var(--f-mono); color: var(--vurgu); }
+.sss p { color: var(--murekkep-2); }
+
+/* --- Dayanak listesi -------------------------------------- */
+.dayanak-liste { list-style: none; padding: 0; }
+.dayanak-liste li {
+  font-family: var(--f-mono); font-size: .85rem; color: var(--murekkep-2);
+  border-left: 3px solid var(--cizgi-koyu);
+  padding-left: calc(var(--olcek)*3);
+  margin-bottom: calc(var(--olcek)*3);
+}
+
+/* --- Yazı altı -------------------------------------------- */
+.yazi-alt { border-top: var(--sinir); margin-top: calc(var(--olcek)*10); }
+.ilgili-liste { list-style: none; padding: 0; }
+.ilgili-liste li { margin-bottom: calc(var(--olcek)*4); }
+.ilgili-liste small { color: var(--murekkep-2); }
+.etiketler {
+  font-family: var(--f-mono); font-size: .78rem; color: var(--murekkep-3);
+}
+
+/* --- Açılış fotoğrafı ------------------------------------- */
+.foto { margin: 0 0 calc(var(--olcek)*6); }
+.foto img {
+  display: block; width: 100%; height: auto;
+  border: var(--sinir);            /* köşe yuvarlatma yok: evrak hissi */
+  background: var(--yuzey-alt);
+}
+.foto figcaption,
+.sekil figcaption {
+  font-family: var(--f-mono); font-size: .72rem;
+  color: var(--murekkep-3);
+  margin-top: calc(var(--olcek)*2);
+}
+.foto figcaption a { color: var(--murekkep-3); }
+
+/* --- Şema (satır içi SVG) --------------------------------- */
+.sekil {
+  margin: 0 0 calc(var(--olcek)*7);
+  padding: calc(var(--olcek)*4) calc(var(--olcek)*4) calc(var(--olcek)*3);
+  background: var(--yuzey); border: var(--sinir);
+}
+.sekil svg { display: block; width: 100%; height: auto; }
+.sekil figcaption { margin-top: calc(var(--olcek)*3); }
+
+/* Şema jetonları — tema değişkenlerinden beslenir */
+.sekil .s-metin        { fill: var(--murekkep); font-family: var(--f-metin); }
+.sekil .s-mono         { fill: var(--murekkep-2); font-family: var(--f-mono); }
+.sekil .s-kutu         { fill: var(--yuzey-alt); }
+.sekil .s-cizgi        { stroke: var(--cizgi); stroke-width: 1; }
+.sekil .s-cizgi-kalin  { stroke: var(--cizgi-koyu); stroke-width: 2; }
+.sekil .s-ok           { fill: var(--cizgi-koyu); }
+.sekil .s-vurgu-dolgu  { fill: var(--vurgu); }
+.sekil .s-uyari-dolgu  { fill: var(--uyari); }
+.sekil .s-tehlike-dolgu{ fill: var(--tehlike); }
+.sekil .s-bilgi-dolgu  { fill: var(--bilgi); }
+.sekil .s-notr-dolgu   { fill: var(--cizgi-koyu); }
+.sekil .s-cubuk-yazi   { fill: var(--dugme-yazi); font-family: var(--f-mono); }
+
+/* --- Rehber dizinindeki görselli kartlar ------------------ */
+.secim.gorselli {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: calc(var(--olcek)*4);
+  align-items: start;
+}
+.secim.gorselli img {
+  grid-column: 1; grid-row: 1 / 3;
+  width: 100%; height: auto;
+  border: var(--sinir); background: var(--yuzey-alt);
+}
+.secim.gorselli b, .secim.gorselli span { grid-column: 2; }
+
+@media (max-width: 30rem) {
+  .secim.gorselli { grid-template-columns: 84px 1fr; }
+}
+
+/* --- Yazdırma --------------------------------------------- */
+@media print {
+  .kirinti, .icindekiler { display: none !important; }
+  .yazi h2 { break-after: avoid; }
+  .foto, .sekil { break-inside: avoid; }
+  .sekil { border: 1px solid #999; }
+}

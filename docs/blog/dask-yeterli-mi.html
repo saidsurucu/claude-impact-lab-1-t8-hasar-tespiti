@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DASK Yeterli mi? Sigorta Bedeli ve Azami Teminat</title>
+<meta name="description" content="DASK ne kadar öder? Sigorta bedeli metrekare üzerinden hesaplanır, azami teminatla sınırlıdır. Eksik sigorta tuzağı ve teminat açığının nasıl kapatılacağı.">
+<meta name="keywords" content="DASK ne kadar öder, DASK azami teminat, sigorta bedeli hesaplama, eksik sigorta, DASK yeterli mi, konut sigortası deprem teminatı">
+<meta name="author" content="Deprem Haklarım — T8 Hasar Tespiti · Claude Impact Lab">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B6B5B">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Deprem Haklarım">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="DASK Yeterli mi? Sigorta Bedeli ve Azami Teminat">
+<meta property="og:description" content="DASK ne kadar öder? Sigorta bedeli metrekare üzerinden hesaplanır, azami teminatla sınırlıdır. Eksik sigorta tuzağı ve teminat açığının nasıl kapatılacağı.">
+<meta property="og:url" content="https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html">
+<meta property="og:image" content="https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/gorseller/dask-yeterli-mi.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Hesap makinesi ve üzerinde çalışılan mali belgeler">
+<meta property="article:published_time" content="2026-08-15T08:00:00+03:00">
+<meta property="article:modified_time" content="2026-08-15T08:00:00+03:00">
+<meta property="article:section" content="DASK ve sigorta">
+<meta property="article:author" content="T8 Hasar Tespiti · Claude Impact Lab">
+<meta property="article:tag" content="DASK ne kadar öder">
+<meta property="article:tag" content="DASK azami teminat">
+<meta property="article:tag" content="sigorta bedeli hesaplama">
+<meta property="article:tag" content="eksik sigorta">
+<meta property="article:tag" content="DASK yeterli mi">
+<meta property="article:tag" content="konut sigortası deprem teminatı">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DASK Yeterli mi? Sigorta Bedeli ve Azami Teminat">
+<meta name="twitter:description" content="DASK ne kadar öder? Sigorta bedeli metrekare üzerinden hesaplanır, azami teminatla sınırlıdır. Eksik sigorta tuzağı ve teminat açığının nasıl kapatılacağı.">
+<meta name="twitter:image" content="https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/gorseller/dask-yeterli-mi.jpg">
+<meta name="twitter:image:alt" content="Hesap makinesi ve üzerinde çalışılan mali belgeler">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Deprem Hakları Rehberi" href="../blog/feed.xml">
+<link rel="stylesheet" href="../assets/tasarim.css">
+<link rel="stylesheet" href="./rehber.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#kurulus","name":"Deprem Haklarım","alternateName":"T8 Hasar Tespiti · Claude Impact Lab","url":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/","logo":{"@type":"ImageObject","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#logo","url":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/favicon.svg","contentUrl":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/favicon.svg","width":32,"height":32,"caption":"Deprem Haklarım"},"description":"Deprem öncesi ve sonrasındaki hakları, dayandığı kanun maddesiyle birlikte ve süresi geçmeden önce anlatan, kâr amacı gütmeyen ücretsiz bilgi platformu.","knowsLanguage":"tr-TR","nonprofitStatus":"NonprofitType"},{"@type":"WebSite","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#site","url":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/","name":"Deprem Haklarım","description":"Deprem öncesi ve sonrasındaki haklar, süreler ve başvuru yolları; her biri dayandığı kanun maddesiyle birlikte.","publisher":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#kurulus"},"inLanguage":"tr-TR"},{"@type":"WebPage","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html","url":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html","name":"DASK Yeterli mi? Sigorta Bedeli ve Azami Teminat","description":"DASK ne kadar öder? Sigorta bedeli metrekare üzerinden hesaplanır, azami teminatla sınırlıdır. Eksik sigorta tuzağı ve teminat açığının nasıl kapatılacağı.","isPartOf":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#site"},"breadcrumb":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#kirinti"},"inLanguage":"tr-TR","datePublished":"2026-08-15","dateModified":"2026-08-15","primaryImageOfPage":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#gorsel"}},{"@type":"ImageObject","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#gorsel","url":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/gorseller/dask-yeterli-mi.jpg","contentUrl":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/gorseller/dask-yeterli-mi.jpg","width":1200,"height":627,"caption":"Hesap makinesi ve üzerinde çalışılan mali belgeler","creditText":"RDNE Stock project · Pexels","license":"https://www.pexels.com/license/"},{"@type":"Article","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#makale","isPartOf":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html"},"mainEntityOfPage":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html"},"headline":"DASK'ım yeterli mi? Sigorta bedeli, azami teminat ve eksik sigorta tuzağı","name":"DASK'ım yeterli mi? Sigorta bedeli, azami teminat ve eksik sigorta tuzağı","description":"DASK ne kadar öder? Sigorta bedeli metrekare üzerinden hesaplanır, azami teminatla sınırlıdır. Eksik sigorta tuzağı ve teminat açığının nasıl kapatılacağı.","articleSection":"DASK ve sigorta","keywords":["DASK ne kadar öder","DASK azami teminat","sigorta bedeli hesaplama","eksik sigorta","DASK yeterli mi","konut sigortası deprem teminatı"],"inLanguage":"tr-TR","datePublished":"2026-08-15","dateModified":"2026-08-15","author":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#kurulus"},"publisher":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/#kurulus"},"image":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#gorsel"},"wordCount":746,"timeRequired":"PT4M","isAccessibleForFree":true,"license":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/","about":[{"@type":"Thing","name":"DASK ne kadar öder"},{"@type":"Thing","name":"DASK azami teminat"},{"@type":"Thing","name":"sigorta bedeli hesaplama"},{"@type":"Thing","name":"eksik sigorta"},{"@type":"Thing","name":"DASK yeterli mi"},{"@type":"Thing","name":"konut sigortası deprem teminatı"}],"citation":[{"@type":"CreativeWork","name":"Zorunlu Deprem Sigortası Tarife ve Talimat Tebliği — metrekare bedelleri ve azami teminat"},{"@type":"CreativeWork","name":"Zorunlu Deprem Sigortası Genel Şartları — muafiyet ve teminat kapsamı"},{"@type":"CreativeWork","name":"6102 sayılı Türk Ticaret Kanunu — eksik sigorta ve oransal ödeme"}]},{"@type":"BreadcrumbList","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#kirinti","itemListElement":[{"@type":"ListItem","position":1,"name":"Deprem Haklarım","item":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/"},{"@type":"ListItem","position":2,"name":"Deprem Hakları Rehberi","item":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/"},{"@type":"ListItem","position":3,"name":"DASK'ım yeterli mi? Sigorta bedeli, azami teminat ve eksik sigorta tuzağı","item":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html"}]},{"@type":"FAQPage","@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html#sss","isPartOf":{"@id":"https://saidsurucu.github.io/claude-impact-lab-1-t8-hasar-tespiti/blog/dask-yeterli-mi.html"},"mainEntity":[{"@type":"Question","name":"DASK'ın ödeyeceği tutar nasıl hesaplanır?","acceptedAnswer":{"@type":"Answer","text":"Sigorta bedeli, yapı tarzına göre belirlenen metrekare birim bedelinin binanın brüt yüzölçümüyle çarpılmasıyla bulunur. Bulunan tutar azami teminatı aşarsa ödeme azami teminatla sınırlıdır; ayrıca yüzde iki muafiyet düşülür."}},{"@type":"Question","name":"DASK azami teminat tutarı ne kadar?","acceptedAnswer":{"@type":"Answer","text":"Azami teminat tutarı sabit değildir; tarife dönemlerinde güncellenir. 01.05.2026 tarifesine göre bir mesken için azami teminat 2.271.283 TL olarak belirtilmiştir. Güncel değeri her zaman resmî tarifeden teyit edin."}},{"@type":"Question","name":"Eksik sigorta ne demek?","acceptedAnswer":{"@type":"Answer","text":"Sigorta bedelinin, malın gerçek değerinden düşük belirlenmesidir. Bu durumda sigortacı, sigorta bedelinin gerçek değere oranı ölçüsünde orantılı ödeme yapar; hasarın tamamını ödemez."}},{"@type":"Question","name":"DASK'ın üstünü hangi poliçe kapatır?","acceptedAnswer":{"@type":"Answer","text":"Deprem ek teminatlı ihtiyari konut sigortası. Önce DASK limitine kadar öder, limiti aşan kısım konut paket poliçesinin deprem teminatından karşılanır."}}]}]}
+</script>
+</head>
+<body>
+<a class="atla" href="#ana">İçeriğe atla</a>
+<div class="kurum-serit">
+  <div class="kap-genis">
+    <b>Deprem Haklarım Girişimi</b>
+    <span>Bağımsız · Kâr amacı gütmeyen · Ücretsiz</span>
+    <span class="bosluk"></span>
+    <button class="tema-dugme" type="button">Koyu tema</button>
+  </div>
+</div>
+<header class="ust">
+  <div class="ust-ic">
+    <a class="marka" href="../index.html">
+      <span class="marka-isaret" aria-hidden="true">DH</span>
+      <span class="marka-ad"><b>Deprem Haklarım</b><span>Hak · Süre · Dilekçe</span></span>
+    </a>
+    <span class="bosluk"></span>
+    <nav class="gezinme" aria-label="Ana gezinme"><a href="../arac/index.html">Araçlar</a><a href="../bilgi/index.html">Bilgi Merkezi</a><a href="../kurumsal/hakkimizda.html">Kurumsal</a></nav>
+    <details class="gezinme-mobil">
+      <summary aria-label="Menü">Menü</summary>
+      <div class="gezinme-mobil-panel"><a href="../index.html">Ana sayfa</a><span class="etiket">Araçlar</span><span class="etiket">Bilgi Merkezi</span><a href="../bilgi/index.html">Tüm konular</a><a href="../bilgi/konut-sigorta.html">Konut ve sigorta</a><a href="../bilgi/hasar-tespit.html">Hasar tespiti ve itiraz</a><a href="../bilgi/devlet-destek.html">Devlet destekleri</a><a href="../bilgi/mali-yukumluluk.html">Vergi, prim ve borçlar</a><a href="../bilgi/calisma-isyeri.html">Çalışma hayatı ve iş yeri</a><a href="../bilgi/kira-mulkiyet.html">Kira ve mülkiyet</a><a href="../bilgi/kayip-miras.html">Yakınını kaybedenler</a><a href="../bilgi/dava-uyusmazlik.html">Dava ve uyuşmazlık</a><a href="../bilgi/ozel-durumlar.html">Özel durumlar</a><span class="etiket">Kurumsal</span></div>
+    </details>
+  </div>
+</header>
+<main id="ana" class="kap">
+<nav class="kirinti" aria-label="Kırıntı yolu">
+<ol>
+<li><a href="../index.html">Deprem Haklarım</a></li>
+<li><a href="./index.html">Deprem Hakları Rehberi</a></li>
+<li><span aria-current="page">DASK&#x27;ım yeterli mi? Sigorta bedeli, azami teminat ve eksik sigorta tuzağı</span></li>
+</ol>
+</nav>
+<article class="yazi">
+<header>
+<p class="etiket">DASK ve sigorta</p>
+<h1>DASK'ım yeterli mi? Sigorta bedeli, azami teminat ve eksik sigorta tuzağı</h1>
+<p class="giris">DASK'ın ödeyeceği tutar konutunuzun piyasa değeri değildir. Bedel metrekareyle hesaplanır, azami teminatla sınırlıdır ve muafiyet düşülür.</p>
+<p class="yazi-bilgi">
+<time datetime="2026-08-15">15 Ağustos 2026</time>
+ · <span>~4 dakika okuma</span>
+ · <span>T8 Hasar Tespiti · Claude Impact Lab</span>
+</p>
+</header>
+<figure class="foto">
+<img src="./gorseller/dask-yeterli-mi.jpg" alt="Hesap makinesi ve üzerinde çalışılan mali belgeler" width="1200" height="627" decoding="async" fetchpriority="high">
+<figcaption>Fotoğraf: <a href="https://www.pexels.com/@rdne" rel="nofollow noopener" target="_blank">RDNE Stock project</a> · <a href="https://www.pexels.com/photo/calculator-on-top-of-the-paper-7580854/" rel="nofollow noopener" target="_blank">Pexels</a></figcaption>
+</figure>
+<nav class="icindekiler" aria-label="İçindekiler">
+<p class="etiket">İçindekiler</p>
+<ol>
+<li><a href="#sigorta-bedeli">1. Sigorta bedeli: metrekare × birim bedel</a></li>
+<li><a href="#azami-teminat">2. Azami teminat: üst sınır</a></li>
+<li><a href="#muafiyet">3. Muafiyet: %2 tenzili muafiyet</a></li>
+<li><a href="#teminat-acigi">Sonuç: teminat açığı</a></li>
+<li><a href="#eksik-sigorta">Eksik sigorta tuzağı</a></li>
+<li><a href="#acigi-kapatmak">Açığı kapatmanın yolları</a></li>
+<li><a href="#policeyi-kontrol">Poliçenizi okurken bakılacak beş şey</a></li>
+<li><a href="#metrekare">En sık yapılan hata: yanlış metrekare</a></li>
+<li><a href="#ne-zaman-yeterli">DASK ne zaman &quot;yeterli&quot; sayılır?</a></li>
+<li><a href="#sik-sorulan-sorular">Sık sorulan sorular</a></li>
+<li><a href="#dayanaklar">Hangi kanuna dayanıyor?</a></li>
+</ol>
+</nav>
+<figure class="sekil">
+<svg viewBox="0 0 720 142" role="img" aria-labelledby="sekil-dask-yeterli-mi-b sekil-dask-yeterli-mi-a" xmlns="http://www.w3.org/2000/svg"><title id="sekil-dask-yeterli-mi-b">Teminat açığı: 100 m² betonarme konut örneği</title><desc id="sekil-dask-yeterli-mi-a">Varsayılan 4.000.000 TL değerindeki konutta DASK sigorta bedeli 1.071.400 TL, açıkta kalan tutar 2.928.600 TL.</desc><rect x="0" y="8" width="193" height="52" class="s-vurgu-dolgu"/><text x="96.5" y="40" class="s-cubuk-yazi" font-size="13" font-weight="700" text-anchor="middle">27%</text><rect x="193" y="8" width="527" height="52" class="s-tehlike-dolgu"/><text x="456.5" y="40" class="s-cubuk-yazi" font-size="13" font-weight="700" text-anchor="middle">73%</text><rect x="0" y="79" width="12" height="12" class="s-vurgu-dolgu"/><text x="22" y="90" class="s-metin" font-size="14">DASK sigorta bedeli</text><text x="720" y="90" class="s-mono" font-size="13" text-anchor="end">1.071.400 TL</text><rect x="0" y="105" width="12" height="12" class="s-tehlike-dolgu"/><text x="22" y="116" class="s-metin" font-size="14">Açıkta kalan</text><text x="720" y="116" class="s-mono" font-size="13" text-anchor="end">2.928.600 TL</text></svg>
+<figcaption>Üstüne %2 tenzili muafiyet (21.428 TL) düşülür; eşya, enkaz ve barınma zaten teminat dışıdır. Değerler 01.05.2026 tarifesine göredir.</figcaption>
+</figure>
+<p>"DASK'ım var" cümlesi, çoğu insan için "evim sigortalı" anlamına geliyor.
+Oysa DASK'ın ödeyeceği tutarın konutunuzun piyasa değeriyle ilgisi yoktur.
+Ödeme üç filtreden geçer: <strong>sigorta bedeli</strong>,
+<strong>azami teminat</strong> ve <strong>muafiyet</strong>.</p>
+
+<h2 id="sigorta-bedeli">1. Sigorta bedeli: metrekare × birim bedel</h2>
+
+<p>Sigorta bedeli, yapı tarzına göre belirlenen metrekare birim bedelinin
+binanın brüt yüzölçümüyle çarpılmasıyla bulunur.</p>
+
+<div class="tablo-sar">
+<table>
+  <caption class="sr">Yapı tarzına göre metrekare birim bedelleri</caption>
+  <thead><tr><th>Yapı tarzı</th><th class="sayi">m² bedeli (01.05.2026)</th></tr></thead>
+  <tbody>
+    <tr><td>Çelik, betonarme karkas</td><td class="sayi">10.714 TL</td></tr>
+    <tr><td>Diğer yapılar</td><td class="sayi">7.142 TL</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Örnek:</strong> 100 m² betonarme konut →
+100 × 10.714 = <strong>1.071.400 TL</strong> sigorta bedeli.</p>
+
+<p>Aynı konutun piyasa değeri 4 milyon TL olabilir. DASK bu farkı kapatmaz;
+zaten amacı da bu değildir — DASK, yapıyı yeniden üretme maliyetine dayalı bir
+sistemdir.</p>
+
+<h2 id="azami-teminat">2. Azami teminat: üst sınır</h2>
+
+<p>Sigorta bedeli ne çıkarsa çıksın, bir mesken için ödenecek tutar
+<strong>azami teminat</strong> ile sınırlıdır. 01.05.2026 tarifesine göre bu
+tutar 2.271.283 TL olarak belirtilmiştir.</p>
+
+<div class="kart uyarili">
+  <span class="etiket">Tarih damgası</span>
+  <p style="margin-bottom:0">Azami teminat tutarı 2026'da <strong>yıl içinde
+  birden fazla kez</strong> güncellenmiştir: 2024'te 1.272.000 TL, 2025'te
+  1.704.162 TL, 2026 başında 2.095.462 TL, 01.05.2026'da 2.271.283 TL. Bu
+  yüzden hiçbir içerik sayfasına sabit rakam yazılmamalı; hesaplama, tarih
+  damgalı bir tarifeden yapılmalıdır. <a href="../arac/teminat.html">Sigorta açığı
+  aracı</a> hangi tarihli tarifeyle hesap yaptığını size gösterir.</p>
+</div>
+
+<h2 id="muafiyet">3. Muafiyet: %2 tenzili muafiyet</h2>
+
+<p>Her hasarda sigorta bedelinin <strong>%2'si oranında tenzili muafiyet</strong>
+uygulanır; DASK muafiyeti aşan kısımdan sorumludur. 1.071.400 TL bedelli bir
+konutta bu, 21.428 TL demektir. Bu tutarın altındaki hasarlar için ödeme
+yapılmaz.</p>
+
+<p>Muafiyet uygulaması bakımından her 72 saatlik dönem tek hasar sayılır —
+bu kural sigortalının lehinedir.
+<a href="./dask-hasar-ihbari.html">Ayrıntısı burada</a>.</p>
+
+<h2 id="teminat-acigi">Sonuç: teminat açığı</h2>
+
+<p>Üç filtreden sonra ortaya çıkan tabloya <strong>teminat açığı</strong>
+diyoruz: konutunuzun gerçek değeri ile sigortanın ödeyeceği tutar arasındaki
+fark, artı DASK'ın hiç ödemediği kalemler.</p>
+
+<div class="tablo-sar">
+<table>
+  <caption class="sr">Örnek teminat açığı hesabı</caption>
+  <thead><tr><th>Kalem</th><th class="sayi">Tutar</th></tr></thead>
+  <tbody>
+    <tr><td>Konutun varsayılan değeri</td><td class="sayi">4.000.000 TL</td></tr>
+    <tr><td>DASK sigorta bedeli (100 m² betonarme)</td><td class="sayi">1.071.400 TL</td></tr>
+    <tr><td>Muafiyet (%2)</td><td class="sayi">−21.428 TL</td></tr>
+    <tr><td><strong>Açıkta kalan</strong></td><td class="sayi"><strong>2.928.600 TL</strong></td></tr>
+    <tr><td>Ayrıca kapsam dışı: eşya, enkaz, kira, bedeni zarar</td><td class="sayi">—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="eksik-sigorta">Eksik sigorta tuzağı</h2>
+
+<p>İhtiyari konut sigortası yaptıranların en sık düştüğü tuzak budur. Sigorta
+bedeli, malın gerçek değerinden düşük belirlenmişse
+<strong>eksik sigorta</strong> söz konusu olur ve sigortacı, sigorta bedelinin
+gerçek değere oranı ölçüsünde <strong>orantılı</strong> ödeme yapar.</p>
+
+<div class="kart tehlikeli">
+  <span class="etiket">Somut örnek</span>
+  <p style="margin-bottom:0">Gerçek değeri 4.000.000 TL olan konutu 2.000.000 TL
+  üzerinden sigortalatan kişi, 1.000.000 TL'lik hasarda tam ödeme değil,
+  oran gereği <strong>500.000 TL</strong> tazminat alır. Poliçesi olduğu için
+  kendini güvende sanan kişi, hasarın yarısını üstlenmiş olur.</p>
+</div>
+
+<p>Prim düşürmek için bedeli düşük göstermek, hasar anında en pahalı karara
+dönüşür.</p>
+
+<h2 id="acigi-kapatmak">Açığı kapatmanın yolları</h2>
+
+<ol>
+  <li><strong>Deprem ek teminatlı konut sigortası.</strong> DASK limitini aşan
+  bina hasarını, eşyayı, enkaz kaldırmayı ve alternatif konaklamayı poliçeye
+  göre karşılar.</li>
+  <li><strong>Poliçedeki metrekare ve yapı tarzını düzeltin.</strong> Yanlış
+  metrekare doğrudan eksik bedel demektir.</li>
+  <li><strong>Ferdi kaza poliçenizde deprem teminatını kontrol edin.</strong>
+  Aksi kararlaştırılmadıkça deprem teminat dışıdır.</li>
+  <li><strong>Kiracıysanız kendi eşyanızı sigortalayın.</strong> DASK
+  yaptıramazsınız ama eşya sigortası yaptırabilirsiniz.</li>
+</ol>
+
+<h2 id="policeyi-kontrol">Poliçenizi okurken bakılacak beş şey</h2>
+
+<ul>
+  <li>Brüt yüzölçümü doğru mu?</li>
+  <li>Yapı tarzı (çelik/betonarme karkas veya diğer) doğru mu?</li>
+  <li>Sigorta bedeli ve azami teminat kaç TL yazıyor?</li>
+  <li>Poliçe hangi tarihe kadar geçerli? Yenileme yapılmadıysa teminat yoktur.</li>
+  <li>Bina, genel şartlardaki kapsam dışı hâllerden birine giriyor mu
+  (tamamı ticari kullanım, taşıyıcı sistem tadilatı, metruk yapı)?</li>
+</ul>
+
+<p>Poliçeniz hiç yoksa, asıl kayıp cezai yaptırım değildir:
+<a href="./daskim-yoksa-ne-olur.html">DASK'ı olmayan devlet konut yardımından
+da yararlanamaz.</a></p>
+
+<h2 id="metrekare">En sık yapılan hata: yanlış metrekare</h2>
+
+<p>Sigorta bedeli <strong>brüt yüzölçümü</strong> üzerinden hesaplanır. Poliçede
+net alan yazılmışsa veya balkon, ortak alan payı gibi kalemler eksik
+hesaplanmışsa, sigorta bedeliniz gerçekte olması gerekenden düşük çıkar ve
+hasar anında ödeme de düşük olur.</p>
+
+<ul>
+  <li>Tapu ve proje bilgilerinizle poliçedeki metrekareyi karşılaştırın.</li>
+  <li>Yapı tarzı alanının doğru olduğundan emin olun: betonarme bir binada
+  "diğer" seçilmişse bedel yaklaşık üçte bir oranında düşük hesaplanır.</li>
+  <li>Hata varsa poliçeyi düzenleyen şirkete başvurup
+  <strong>zeyilname</strong> ile düzeltilmesini isteyin.</li>
+</ul>
+
+<h2 id="ne-zaman-yeterli">DASK ne zaman "yeterli" sayılır?</h2>
+
+<p>DASK'ın amacı konutunuzun piyasa değerini korumak değil, yapının yeniden
+üretilmesine katkı sağlamaktır. Bu çerçevede DASK şu üç koşulda görece
+yeterlidir:</p>
+
+<ol>
+  <li>Binanın metrekaresi küçük ve sigorta bedeli, gerçek yapım maliyetine
+  yakınsa,</li>
+  <li>Eşya, barınma ve bedeni zarar riskleri <strong>ayrı poliçelerle</strong>
+  karşılanıyorsa,</li>
+  <li>Muafiyet tutarını kendi bütçenizden karşılayabilecek durumdaysanız.</li>
+</ol>
+
+<p>Üçü de sağlanmıyorsa, DASK tek başına bir koruma planı değil, planın yalnızca
+ilk katmanıdır.</p>
+<h2 id="sik-sorulan-sorular">Sık sorulan sorular</h2>
+<div class="sss">
+<h3>DASK&#x27;ın ödeyeceği tutar nasıl hesaplanır?</h3>
+<p>Sigorta bedeli, yapı tarzına göre belirlenen metrekare birim bedelinin binanın brüt yüzölçümüyle çarpılmasıyla bulunur. Bulunan tutar azami teminatı aşarsa ödeme azami teminatla sınırlıdır; ayrıca yüzde iki muafiyet düşülür.</p>
+<h3>DASK azami teminat tutarı ne kadar?</h3>
+<p>Azami teminat tutarı sabit değildir; tarife dönemlerinde güncellenir. 01.05.2026 tarifesine göre bir mesken için azami teminat 2.271.283 TL olarak belirtilmiştir. Güncel değeri her zaman resmî tarifeden teyit edin.</p>
+<h3>Eksik sigorta ne demek?</h3>
+<p>Sigorta bedelinin, malın gerçek değerinden düşük belirlenmesidir. Bu durumda sigortacı, sigorta bedelinin gerçek değere oranı ölçüsünde orantılı ödeme yapar; hasarın tamamını ödemez.</p>
+<h3>DASK&#x27;ın üstünü hangi poliçe kapatır?</h3>
+<p>Deprem ek teminatlı ihtiyari konut sigortası. Önce DASK limitine kadar öder, limiti aşan kısım konut paket poliçesinin deprem teminatından karşılanır.</p>
+</div>
+<h2 id="dayanaklar">Hangi kanuna dayanıyor?</h2>
+<p>Bu yazıdaki bilgilerin dayandığı düzenlemeler:</p>
+<ul class="dayanak-liste">
+<li>Zorunlu Deprem Sigortası Tarife ve Talimat Tebliği — metrekare bedelleri ve azami teminat</li>
+<li>Zorunlu Deprem Sigortası Genel Şartları — muafiyet ve teminat kapsamı</li>
+<li>6102 sayılı Türk Ticaret Kanunu — eksik sigorta ve oransal ödeme</li>
+</ul>
+<div class="serit">
+<strong>Doğrulama durumu: kaynak metinden teyit bekliyor.</strong>
+Bu yazıdaki kanun maddeleri birden fazla bağımsız ikincil kaynaktan derlendi; Resmî Gazete ve mevzuat.gov.tr metinleriyle birebir karşılaştırma sürüyor. Kesin bilgi ve somut olayınıza uygulanması için avukata veya barosunun <strong>adli yardım</strong> birimine danışın.
+</div>
+<div class="kart vurgulu">
+<span class="etiket">Bu sayfadan devam edin</span>
+<ul style="margin:0">
+<li><a href="../arac/teminat.html"><strong>Sigorta açığı hesabı</strong></a> — binanızın bedelini, muafiyeti ve açıkta kalan tutarı hesaplayın</li>
+<li><a href="../arac/haklarim.html"><strong>Haklarım</strong></a> — profilinize göre hangi haklara sahipsiniz?</li>
+</ul>
+</div>
+<footer class="yazi-alt">
+<h2 id="ilgili-yazilar">İlgili yazılar</h2>
+<ul class="ilgili-liste">
+<li><a href="./dask-neleri-karsilamaz.html">DASK neleri karşılamaz? Eşya, enkaz, kira ve can kaybı teminat dışıdır</a><br><small>DASK binanızı sigortalar, hayatınızı değil. Ev eşyası, enkaz kaldırma, alternatif konaklama, kira kaybı ve ölüm dâhil bedeni za…</small></li>
+<li><a href="./dask-hasar-ihbari.html">DASK hasar ihbarı nasıl yapılır? 15 günlük süre, %2 muafiyet ve 72 saat kuralı</a><br><small>Depremden sonra DASK hasar ihbarı için süre 15 gün. İhbar kanalları, eksper süreci, %2 muafiyet ve ödemenin nasıl hesaplandığı.</small></li>
+<li><a href="./daskim-yoksa-ne-olur.html">DASK'ım yoksa ne olur? Asıl kayıp ceza değil, devlet desteğini kaybetmektir</a><br><small>Zorunlu deprem sigortası bulunmayanlara devlet konut yardımı veya kredi ödenmediği belirtilmektedir. DASK&#x27;ın asıl karşılığı bud…</small></li>
+<li><a href="./eksper-raporuna-itiraz.html">Eksper raporu son söz değildir: itiraz, ikinci eksper ve hakem eksper</a><br><small>Sigorta ödemesini az bulanların çoğu doğrudan mahkemeyi düşünüyor. Arada çok daha hızlı üç basamak var: itiraz, ikinci eksper, …</small></li>
+</ul>
+<p class="etiketler">Etiketler: DASK ne kadar öder, DASK azami teminat, sigorta bedeli hesaplama, eksik sigorta, DASK yeterli mi, konut sigortası deprem teminatı</p>
+<p class="etiketler"><a href="./index.html">← Tüm rehber yazıları</a></p>
+</footer>
+</article>
+</main>
+<footer class="alt">
+  <div class="kap-genis">
+    <div class="alt-sutunlar">
+      <div class="alt-marka">
+        <b>Deprem Haklarım</b>
+        <p>Deprem öncesi ve sonrasında sahip olduğunuz hakları, kanuni dayanağıyla ve süresi geçmeden anlatan bağımsız bilgi platformu.</p>
+        <p>Sunucu yok, analitik yok, çerez yok. Girdiğiniz hiçbir bilgi cihazınızdan çıkmaz.</p>
+      </div>
+      <div><h2>Araçlar</h2><ul></ul></div>
+      <div><h2>Bilgi Merkezi</h2><ul><li><a href="../bilgi/konut-sigorta.html">Konut ve sigorta</a></li><li><a href="../bilgi/hasar-tespit.html">Hasar tespiti ve itiraz</a></li><li><a href="../bilgi/devlet-destek.html">Devlet destekleri</a></li><li><a href="../bilgi/mali-yukumluluk.html">Vergi, prim ve borçlar</a></li><li><a href="../bilgi/calisma-isyeri.html">Çalışma hayatı ve iş yeri</a></li><li><a href="../bilgi/kira-mulkiyet.html">Kira ve mülkiyet</a></li><li><a href="../bilgi/index.html">Tüm konular</a></li></ul></div>
+      <div><h2>Kurumsal</h2><ul></ul></div>
+    </div>
+    <div class="alt-yasal">
+      <p><strong>Bu platform hukuki tavsiye vermez.</strong> Buradaki bilgiler genel bilgilendirme
+      amaçlıdır, avukatlık hizmetinin yerine geçmez. Somut durumunuz için bir avukata veya
+      bulunduğunuz ilin barosunun <strong>adli yardım</strong> birimine başvurun.</p>
+      <p>Bilgilerin resmî kaynaklardan doğrulanması sürmektedir; her sayfa kendi doğrulama
+      durumunu gösterir. Kâr amacı gütmeyen açık kaynak çalışma · T8 — Hasar Tespiti · Claude Impact Lab</p>
+    </div>
+  </div>
+</footer>
+<script type="module">
+  import { temaBaslat, temaBagla } from "../assets/app.js";
+  temaBaslat(); temaBagla();
+</script>
+</body>
+</html>

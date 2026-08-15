@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <desc>
+    Paylasim gorseli kaynagi. 1200x1200 tuval; tasarim dikeyde ortalanmis 630
+    piksellik banda yerlestirildi. Uretim: qlmanage -t -s 1200 -o TMP
+    scripts/og-kaynak.svg, sonra sips -c 630 1200 TMP/og-kaynak.svg.png --out
+    docs/assets/og.png
+  </desc>
+  <rect width="1200" height="1200" fill="#14181A"/>
+
+  <!-- Marka çubuğu -->
+  <rect x="90" y="345" width="18" height="72" fill="#0B6B5B"/>
+  <text x="130" y="404" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="46" font-weight="bold" fill="#E7EDEA" letter-spacing="-1">Deprem Haklarım</text>
+
+  <!-- Başlık -->
+  <text x="90" y="560" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="86" font-weight="bold" fill="#E7EDEA" letter-spacing="-2">Haklarınız var —</text>
+  <text x="90" y="660" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="86" font-weight="bold" fill="#4FC0A7" letter-spacing="-2">ama süreleri işliyor.</text>
+
+  <!-- Alt satır -->
+  <text x="90" y="748" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="38" fill="#9EAAB1">Hangi hakkınız var, kaç gününüz kaldı, hangi dilekçe nereye?</text>
+
+  <!-- Künye şeridi -->
+  <rect x="90" y="820" width="1020" height="2" fill="#2A3135"/>
+  <text x="90" y="872" font-family="Menlo, Consolas, monospace"
+        font-size="26" fill="#7C888F">ÜCRETSİZ · KAYIT YOK · REKLAM YOK</text>
+</svg>
